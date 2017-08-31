@@ -73,26 +73,26 @@ function userReducer(state, action) {
 var RootCmp = (function () {
     function RootCmp() {
     }
+    RootCmp = __decorate([
+        core_1.Component({
+            template: "ROOT[<router-outlet></router-outlet>]"
+        })
+    ], RootCmp);
     return RootCmp;
 }());
-RootCmp = __decorate([
-    core_1.Component({
-        template: "ROOT[<router-outlet></router-outlet>]"
-    })
-], RootCmp);
 var TodoComponent = (function () {
     function TodoComponent(store) {
         this.store = store;
         this.todo = this.store.select('todos', 'selected');
     }
+    TodoComponent = __decorate([
+        core_1.Component({
+            template: "\n      Todo [\n        <div *ngIf=\"(todo|async) as t\">\n           ID {{t.id}}\n           User {{t.user}}\n        </div>\n      ]\n    "
+        }),
+        __metadata("design:paramtypes", [store_1.Store])
+    ], TodoComponent);
     return TodoComponent;
 }());
-TodoComponent = __decorate([
-    core_1.Component({
-        template: "\n      Todo [\n        <div *ngIf=\"(todo|async) as t\">\n           ID {{t.id}}\n           User {{t.user}}\n        </div>\n      ]\n    "
-    }),
-    __metadata("design:paramtypes", [store_1.Store])
-], TodoComponent);
 describe('DataPersistence', function () {
     describe('navigation', function () {
         beforeEach(function () {
@@ -130,16 +130,16 @@ describe('DataPersistence', function () {
                         onError: function () { return null; }
                     });
                 }
+                __decorate([
+                    effects_1.Effect(),
+                    __metadata("design:type", Object)
+                ], TodoEffects.prototype, "loadTodo", void 0);
+                TodoEffects = __decorate([
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [index_1.DataPersistence])
+                ], TodoEffects);
                 return TodoEffects;
             }());
-            __decorate([
-                effects_1.Effect(),
-                __metadata("design:type", Object)
-            ], TodoEffects.prototype, "loadTodo", void 0);
-            TodoEffects = __decorate([
-                core_1.Injectable(),
-                __metadata("design:paramtypes", [index_1.DataPersistence])
-            ], TodoEffects);
             beforeEach(function () {
                 testing_1.TestBed.configureTestingModule({
                     providers: [TodoEffects],
@@ -185,16 +185,16 @@ describe('DataPersistence', function () {
                         }
                     });
                 }
+                __decorate([
+                    effects_1.Effect(),
+                    __metadata("design:type", Object)
+                ], TodoEffects.prototype, "loadTodo", void 0);
+                TodoEffects = __decorate([
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [index_1.DataPersistence])
+                ], TodoEffects);
                 return TodoEffects;
             }());
-            __decorate([
-                effects_1.Effect(),
-                __metadata("design:type", Object)
-            ], TodoEffects.prototype, "loadTodo", void 0);
-            TodoEffects = __decorate([
-                core_1.Injectable(),
-                __metadata("design:paramtypes", [index_1.DataPersistence])
-            ], TodoEffects);
             beforeEach(function () {
                 testing_1.TestBed.configureTestingModule({
                     providers: [TodoEffects],
@@ -248,16 +248,16 @@ describe('DataPersistence', function () {
                         }
                     });
                 }
+                __decorate([
+                    effects_1.Effect(),
+                    __metadata("design:type", Object)
+                ], TodoEffects.prototype, "loadTodo", void 0);
+                TodoEffects = __decorate([
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [index_1.DataPersistence])
+                ], TodoEffects);
                 return TodoEffects;
             }());
-            __decorate([
-                effects_1.Effect(),
-                __metadata("design:type", Object)
-            ], TodoEffects.prototype, "loadTodo", void 0);
-            TodoEffects = __decorate([
-                core_1.Injectable(),
-                __metadata("design:paramtypes", [index_1.DataPersistence])
-            ], TodoEffects);
             beforeEach(function () {
                 testing_1.TestBed.configureTestingModule({
                     providers: [TodoEffects],
@@ -309,16 +309,16 @@ describe('DataPersistence', function () {
                         }
                     });
                 }
+                __decorate([
+                    effects_1.Effect(),
+                    __metadata("design:type", Object)
+                ], TodoEffects.prototype, "loadTodo", void 0);
+                TodoEffects = __decorate([
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [index_1.DataPersistence])
+                ], TodoEffects);
                 return TodoEffects;
             }());
-            __decorate([
-                effects_1.Effect(),
-                __metadata("design:type", Object)
-            ], TodoEffects.prototype, "loadTodo", void 0);
-            TodoEffects = __decorate([
-                core_1.Injectable(),
-                __metadata("design:paramtypes", [index_1.DataPersistence])
-            ], TodoEffects);
             function userReducer() {
                 return 'bob';
             }
@@ -382,16 +382,16 @@ describe('DataPersistence', function () {
                         }
                     });
                 }
+                __decorate([
+                    effects_1.Effect(),
+                    __metadata("design:type", Object)
+                ], TodoEffects.prototype, "loadTodo", void 0);
+                TodoEffects = __decorate([
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [index_1.DataPersistence])
+                ], TodoEffects);
                 return TodoEffects;
             }());
-            __decorate([
-                effects_1.Effect(),
-                __metadata("design:type", Object)
-            ], TodoEffects.prototype, "loadTodo", void 0);
-            TodoEffects = __decorate([
-                core_1.Injectable(),
-                __metadata("design:paramtypes", [index_1.DataPersistence])
-            ], TodoEffects);
             function userReducer() {
                 return 'bob';
             }
@@ -445,16 +445,16 @@ describe('DataPersistence', function () {
                         }
                     });
                 }
+                __decorate([
+                    effects_1.Effect(),
+                    __metadata("design:type", Object)
+                ], TodoEffects.prototype, "loadTodo", void 0);
+                TodoEffects = __decorate([
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [index_1.DataPersistence])
+                ], TodoEffects);
                 return TodoEffects;
             }());
-            __decorate([
-                effects_1.Effect(),
-                __metadata("design:type", Object)
-            ], TodoEffects.prototype, "loadTodo", void 0);
-            TodoEffects = __decorate([
-                core_1.Injectable(),
-                __metadata("design:paramtypes", [index_1.DataPersistence])
-            ], TodoEffects);
             function userReducer() {
                 return 'bob';
             }
@@ -504,16 +504,16 @@ describe('DataPersistence', function () {
                         }
                     });
                 }
+                __decorate([
+                    effects_1.Effect(),
+                    __metadata("design:type", Object)
+                ], TodoEffects.prototype, "loadTodo", void 0);
+                TodoEffects = __decorate([
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [index_1.DataPersistence])
+                ], TodoEffects);
                 return TodoEffects;
             }());
-            __decorate([
-                effects_1.Effect(),
-                __metadata("design:type", Object)
-            ], TodoEffects.prototype, "loadTodo", void 0);
-            TodoEffects = __decorate([
-                core_1.Injectable(),
-                __metadata("design:paramtypes", [index_1.DataPersistence])
-            ], TodoEffects);
             function userReducer() {
                 return 'bob';
             }
@@ -570,16 +570,16 @@ describe('DataPersistence', function () {
                         }
                     });
                 }
+                __decorate([
+                    effects_1.Effect(),
+                    __metadata("design:type", Object)
+                ], TodoEffects.prototype, "loadTodo", void 0);
+                TodoEffects = __decorate([
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [index_1.DataPersistence])
+                ], TodoEffects);
                 return TodoEffects;
             }());
-            __decorate([
-                effects_1.Effect(),
-                __metadata("design:type", Object)
-            ], TodoEffects.prototype, "loadTodo", void 0);
-            TodoEffects = __decorate([
-                core_1.Injectable(),
-                __metadata("design:paramtypes", [index_1.DataPersistence])
-            ], TodoEffects);
             function userReducer() {
                 return 'bob';
             }

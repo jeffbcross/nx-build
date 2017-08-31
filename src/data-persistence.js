@@ -177,12 +177,12 @@ var DataPersistence = (function () {
             }
         };
     };
+    DataPersistence = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [store_1.Store, effects_1.Actions])
+    ], DataPersistence);
     return DataPersistence;
 }());
-DataPersistence = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [store_1.Store, effects_1.Actions])
-], DataPersistence);
 exports.DataPersistence = DataPersistence;
 function findSnapshot(component, s) {
     if (s.routeConfig && s.routeConfig.component === component) {
